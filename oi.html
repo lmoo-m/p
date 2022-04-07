@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAI | PEOPLE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="home">
+        <button onclick=audio()>klik</button>
+    </div>
+
+    <div class="isi"><h1 id="isi"></h1></div>
+
+    <img id="pic" src="https://i.pinimg.com/564x/0f/4b/63/0f4b63cd1f57f3097153ff055b3fb0de.jpg" alt="pp anim sed">
+
+    <script>
+       
+        const home = document.getElementById('home')
+        const isi = document.getElementById('isi')
+        const is = document.querySelector('.isi')
+        const pic = document.getElementById('pic')
+
+        is.style.display = 'none'
+
+        function audio(){
+            var sound = new Audio('sound.mp3').play();
+            home.style.display = 'none'
+            is.style.display = 'flex'
+            setTimeout(function(){
+                isi.classList.add('in')
+                setTimeout(function(){
+                    isi.classList.remove('in')
+                },1000)
+                isi.textContent = 'yakin mau move on dari dia'
+                setTimeout(function(){
+                    isi.classList.add('in')
+                    setTimeout(function(){
+                        isi.classList.remove('in')
+                    },1000)
+                    isi.textContent = 'bisa aja dilain waktu kalian bisa bersatu'
+                    setTimeout(function(){
+                        isi.classList.add('in')
+                    setTimeout(function(){
+                        isi.classList.remove('in')
+                    },1000)
+                        isi.textContent = 'bukan ngasih harapan'
+                        setTimeout(function(){
+                            isi.classList.add('in')
+                    setTimeout(function(){
+                        isi.classList.remove('in')
+                    },1000)
+                            isi.textContent = 'cuman memberi pilihan'
+                            setTimeout(function(){
+                                isi.classList.add('in')
+                setTimeout(function(){
+                    isi.classList.remove('in')
+                },1000)
+                                isi.textContent = 'karena melepaskan itu sakit'
+                                setInterval(function(){
+                                    pic.style.display = 'block'
+                                    pic.classList.add('in')
+                                    isi.style.display = 'none'
+                                },2000)
+                            },2000)
+                        },2000)
+                    },4500)
+                },3500)
+            },500)
+        }
+
+    </script>
+</body>
+
+</html>
